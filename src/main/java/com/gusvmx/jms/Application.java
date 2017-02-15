@@ -48,7 +48,9 @@ public class Application {
 	        		.setId(1)
 	        		.setName("Gus")
 	        		.setEmail("gusvmx@" + random.nextInt() + ".com")
+	        		.setLastName("Vargas")
 	        		.build();
+	        System.out.println(person.getName() + " " + person.getLastName() + " " + person.getEmail());
 	        jmsTemplate.convertAndSend("mailbox", person);
 	        try {
 				Thread.sleep(1000);
