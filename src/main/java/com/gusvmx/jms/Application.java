@@ -48,8 +48,11 @@ public class Application {
 	        		.setId(1)
 	        		.setName("Gus")
 	        		.setEmail("gusvmx@" + random.nextInt() + ".com")
+	        		.setLastName("Vargas")
 	        		.build();
 	        jmsTemplate.convertAndSend("mailbox", person);
+	        System.out.println("Nombre:" + person.getName() + " " + person.getLastName() + " " + person.getEmail());
+	        
 	        try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
